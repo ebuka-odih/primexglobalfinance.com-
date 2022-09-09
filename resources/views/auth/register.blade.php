@@ -49,20 +49,22 @@
                     <form method="POST" action="{{ route('register') }}" class="mt-5 card__form">
                         @csrf
                         <div class="form-row">
-                            <div class="form-group col-md-6">
-                                <label for="f_name">First Name</label>
+                            <div class="form-group col-md-12">
+                                <label for="f_name">Fullname</label>
                                 <input type="text" class="form-control mr-2" name="firstname" value="" id="f_name" placeholder="Enter First Name">
                             </div>
+                        </div>
+                        <div class="form-row">
                             <div class="form-group col-md-6">
-                                <label for="l_name">last name</label>
-                                <input type="text" class="form-control" name="lastname" value="" id="l_name" placeholder="Enter last name">
+                                <label for="f_name">Username</label>
+                                <input type="text" class="form-control mr-2" name="username" value="" id="f_name" placeholder="Enter Username">
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="email">Email address</label>
+                                <input type="email" class="form-control" name="email" value="" id="email" placeholder="name@example.com">
                             </div>
                         </div>
 
-                        <div class="form-group ">
-                            <label for="email">Email address</label>
-                            <input type="email" class="form-control" name="email" value="" id="email" placeholder="name@example.com">
-                        </div>
 
                         <div class="form-group ">
                             <label for="phone">Phone Number</label>
