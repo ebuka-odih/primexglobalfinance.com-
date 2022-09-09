@@ -2,7 +2,7 @@
 <html lang="en">
 
 
-<!-- Mirrored from www.ftfinancetraders.com/ by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 06 Sep 2022 04:24:10 GMT -->
+<!-- Mirrored from www.Primexglobalfinances.com/ by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 06 Sep 2022 04:24:10 GMT -->
 <!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
 <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
 
@@ -11,10 +11,10 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 
-    <title>Forex, Bitcoin, Bitcoin Cash, Ethereum, Cryptocurrency & Option Trading | Ftfinancetrader
+    <title>Forex, Bitcoin, Bitcoin Cash, Ethereum, Cryptocurrency & Option Trading | Primexglobalfinance
     </title>
     <!-- Favicon -->
-    <link rel="icon" href="https://ftfinancetraders.com/cloud/app/images/fxfav.png"
+    <link rel="icon" href="https://Primexglobalfinances.com/cloud/app/images/fxfav.png"
           type="image/png" />
 
     <!-- Animation CSS -->
@@ -82,12 +82,14 @@
 <header class="header_wrap fixed-top">
     <div class="container-fluid">
         <nav class="navbar navbar-expand-lg">
-            <a class="navbar-brand page-scroll animation" href="index.html" data-animation="fadeInDown"
+            <a class="navbar-brand page-scroll animation" href="{{ route('index') }}" data-animation="fadeInDown"
                data-animation-delay="1s">
-                <img class="logo_light" style="height: 40px;"
-                     src="https://ftfinancetraders.com/cloud/app/images/fft.png" alt="logo" />
-                <img class="logo_dark" style="height: 40px;"
-                     src="https://ftfinancetraders.com/cloud/app/images/fft.png" alt="logo" />
+                <h3 style="color: white; font-weight: bolder">Primexglobalfinance</h3>
+{{--                <img class="logo_light" style="height: 40px;"--}}
+{{--                     src="https://Primexglobalfinances.com/cloud/app/images/fft.png" alt="logo" />--}}
+{{--                <img class="logo_dark" style="height: 40px;"--}}
+{{--                     src="https://Primexglobalfinances.com/cloud/app/images/fft.png" alt="logo" />--}}
+{{--            --}}
             </a>
             <button class="navbar-toggler animation" type="button" data-toggle="collapse"
                     data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
@@ -113,9 +115,9 @@
                     <li class="animation" data-animation="fadeInDown" data-animation-delay="1.8s"><a
                             class="nav-link page-scroll nav_item content-popup" href="#contactus">Contact</a></li>
                     <li class="animation" data-animation="fadeInDown" data-animation-delay="1.4s"><a
-                            class="nav-link page-scroll nav_item" href="login.html">Login</a></li>
+                            class="nav-link page-scroll nav_item" href="login">Login</a></li>
                     <li class="animation" data-animation="fadeInDown" data-animation-delay="1.4s"><a
-                            class="nav-link page-scroll nav_item" href="register.html">Register</a></li>
+                            class="nav-link page-scroll nav_item" href="register">Register</a></li>
                 </ul>
             </div>
         </nav>
@@ -137,9 +139,9 @@
                     </div>
                     <div class="footer_desc">
                         <p class="animation" data-animation="fadeInUp" data-animation-delay="0.4s">
-                            Ftfinancetrader is
+                            Primexglobalfinance is
                             one of the most transformative technologies since the invention of the Internet.
-                            Ftfinancetrader also in support of financial freedom and the liberty that
+                            Primexglobalfinance also in support of financial freedom and the liberty that
                             Bitcoin provides
                             globally for anyone to voluntarily participate in a permissionless and decentralized
                             network.</p>
@@ -182,8 +184,8 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-6">
-                    <p>2014-2022 <a target="_blank" href="index.html"
-                                    title="ZenithTradeCapital">Ftfinancetrader</a>.
+                    <p>2014-2022 <a target="_blank" href="{{ route('index') }}"
+                                    title="ZenithTradeCapital">Primexglobalfinance</a>.
                         All
                         Rights Reserved. <a href="#" data-toggle="modal">Terms Of Services</a></p>
                 </div>
@@ -243,5 +245,5 @@
 
 
 
-<!-- Mirrored from www.ftfinancetraders.com/ by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 06 Sep 2022 04:24:50 GMT -->
+<!-- Mirrored from www.Primexglobalfinances.com/ by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 06 Sep 2022 04:24:50 GMT -->
 </html>

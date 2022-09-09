@@ -471,7 +471,7 @@
                                     style="color:black"><a href="##">Create Segwit Link</a></h4>
                                 <p class="animation" data-animation="fadeInUp" data-animation-delay="0.4s"
                                    style="color:black">We offer an instant exchange services capable of creating
-                                    instant Ftfinancetrader LINK to your Block chain wallet.</p>
+                                    instant Primexglobalfinance LINK to your Block chain wallet.</p>
                             </div>
                         </div>
                     </div>
@@ -557,7 +557,7 @@
                         TRADING
                         PLATFORM</h4>
                     <p class="animation" data-animation="fadeInUp" data-animation-delay="0.4s">With
-                        Ftfinancetrader
+                        Primexglobalfinance
                         trading has been made easy to all investors.</p>
                     <p class="animation" data-animation="fadeInUp" data-animation-delay="0.6s">Offering
                         automated
@@ -596,16 +596,16 @@
             <div class="col-lg-6 col-md-12 col-sm-12 res_md_mt_40 res_sm_mt_40 res_xs_mt_30">
                 <div class="title_dark title_border text_md_center">
                     <h4 class="animation" data-animation="fadeInUp" data-animation-delay="0.2s">About
-                        Ftfinancetrader
+                        Primexglobalfinance
                     </h4>
                     <p class="animation" data-animation="fadeInUp" data-animation-delay="0.4s">
-                        Ftfinancetrader assists
+                        Primexglobalfinance assists
                         retail and institutional investors in using forex and other instruments as an asset class
                         and part of their investment objectives. We strive to execute on the best trading platforms
                         with access to lowcost pricing, reliable trading infrastructure, fast execution and
                         exceptional client support.. </p>
                     <p class="animation" data-animation="fadeInUp" data-animation-delay="0.8s">
-                        Ftfinancetrader uses
+                        Primexglobalfinance uses
                         direct access to multiple destinations of liquidity in the forex markets without the usual
                         burdens of a deal desk that had previously been unavailable to the retail investor. Now
                         trade FOREX, STOCK CFDs, INDICES, OIL and GOLD on MT4/MT5 with leverage up to 888:1 above
@@ -633,19 +633,19 @@
                     <img alt="logo" src="temp/assets/images/about_img5.png" />
                 </div>
                 <div class="title_dark title_border">
-                    <h4>ABOUT Ftfinancetrader </h4>
-                    <p>Founded in 2013, <b>Ftfinancetrader</b> is an auto and professional trading
+                    <h4>ABOUT Primexglobalfinance </h4>
+                    <p>Founded in 2013, <b>Primexglobalfinance</b> is an auto and professional trading
                         platform dedicated to
                         providing quality trading and investment strategies for its customer. <br />
                         Using our online trading platform, customers can trade and invest in Currencies (Forex),
                         Stock Indices, Commodities, Crypto-Currencies and Synthetic indices 24/7.<br /> We have the
                         most flexible analysis and most comprehensive suite for available trading and investment
                         plans or levels.<br />
-                        <b>Ftfinancetrader</b> has earned an enviable reputation for our commitment to
+                        <b>Primexglobalfinance</b> has earned an enviable reputation for our commitment to
                         high ethical
                         standards and the quality of the trading and investment management experience we provide.
                         <br />
-                        When you invest with <b>Ftfinancetrader</b>, you can be rest assured that your
+                        When you invest with <b>Primexglobalfinance</b>, you can be rest assured that your
                         deposits are held in
                         a separate trust account and used only for trading and profits maximization of individual
                         account and not used for any other purpose. <br />
@@ -689,7 +689,7 @@
                     <p></p>
 
                     <h3>License</h3>
-                    <b>Ftfinancetrader</b> is a licensed and regulated trading and investment platform
+                    <b>Primexglobalfinance</b> is a licensed and regulated trading and investment platform
                     that serves over
                     1,000,000 customers globally.<br />
                     We hold multiple licenses to comply with regulations around the world.<br />
@@ -794,7 +794,7 @@
 
                     +15793993704<br />
 
-                    <b>Email:</b> <a href="#">support@ftfinancetraders.com</a><br />
+                    <b>Email:</b> <a href="#">support@primexglobalfinance.com</a><br />
 
                     <b>Office:</b> Woodlands Mall. 1555 Lake Woodlands Dr. Spring. TX 13<br />
 
