@@ -15,9 +15,7 @@ class User extends Authenticatable
      *
      * @var array
      */
-    protected $fillable = [
-        'name', 'email', 'password',
-    ];
+    protected $guarded = [];
 
     /**
      * The attributes that should be hidden for arrays.
@@ -36,4 +34,12 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    public function acctDetails()
+    {
+        if ($this->bank == 1){
+            return $this->bank_name." ".$this->acct_name." ".$this->acct_number;
+        }
+        return $this->acctDetails();
+    }
 }

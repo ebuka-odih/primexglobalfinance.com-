@@ -23,4 +23,15 @@ include 'admin.php';
 Route::group(['middleware' => ['auth', 'verified'], 'prefix' => 'user', 'as' => 'user.'], function(){
     Route::get('dashboard', 'UserController@dashboard')->name('dashboard');
 
+
+    Route::get('deposit/transactions', "DepositController@transactions")->name('transactions');
+    Route::get('deposit', "DepositController@deposit")->name('deposit');
+    Route::post('process/deposit', "DepositController@processDeposit")->name('processDeposit');
+    Route::get('deposit/payment/QH5H3Q64{id}2GER', "DepositController@payment")->name('payment');
+    Route::post('process/payment/QH5H3Q642GER', "DepositController@processPayment")->name('processPayment');
+
+    Route::get('withdrawal/details', "WithdrawMethodController@create")->name('acctDetails');
+    Route::post('bank/details', "WithdrawMethodController@bank")->name('bank');
+    Route::post('crypto/details', "WithdrawMethodController@crypto")->name('crypto');
+
 });

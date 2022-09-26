@@ -15,13 +15,13 @@
     <!-- Fonts and icons -->
     <script src="https://www.ftfinancetraders.com/dash/js/plugin/webfont/webfont.min.js"></script>
     <!-- Sweet Alert -->
-    <script src="https://www.ftfinancetraders.com/dash/js/plugin/sweetalert/sweetalert.min.js "></script>
+    <script src="{{ asset('js/sweetalert.min.js') }}"></script>
     <!-- CSS Files -->
-    <link rel="stylesheet" href="https://www.ftfinancetraders.com/dash/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://www.ftfinancetraders.com/dash/css/fonts.min.css">
-    <link rel="stylesheet" href="https://www.ftfinancetraders.com/dash/css/atlantis.min.css">
-    <link rel="stylesheet" href="https://www.ftfinancetraders.com/dash/css/customs.css">
-    <link rel="stylesheet" href="https://www.ftfinancetraders.com/dash/css/style.css">
+    <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/fonts.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/atlantis.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/customs.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/style.css') }}">
     <link rel="stylesheet" href="https://cdn.datatables.net/buttons/1.6.2/css/buttons.dataTables.min.css">
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/bs4/dt-1.10.21/af-2.3.5/b-1.6.3/b-flash-1.6.3/b-html5-1.6.3/b-print-1.6.3/r-2.2.5/datatables.min.css"/>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -174,8 +174,8 @@
                     </div>
                     <ul class="nav nav-primary">
                         <li class="nav-item active">
-                            <a href="https://www.ftfinancetraders.com/dashboard">
-                                <i class="fa-solid fa-bell"></i>
+                            <a href="{{ route('user.dashboard') }}">
+                                <i class="fa fa-home"></i>
                                 <p>Dashboard</p>
                             </a>
                         </li><br />
@@ -188,7 +188,7 @@
                             <div class="collapse" id="bases">
                                 <ul class="nav nav-collapse">
                                     <li>
-                                        <a href="https://www.ftfinancetraders.com/dashboard/accountdetails">
+                                        <a href="{{ route('user.acctDetails') }}">
                                             <span class="sub-item">Withdrawal Info</span>
                                         </a>
                                     </li>
@@ -331,8 +331,12 @@
             </div>
         </div>
         <!-- /Verify Modal -->
+        <div class="main-panel bg-dark">
 
       @yield('content')
+        @include('dashboard.layout.footer')
+
+        </div>
 
     </div>
 </div>
@@ -352,31 +356,33 @@
 
 </script>
 <!--   Core JS Files   -->
-<script src="https://www.ftfinancetraders.com/dash/js/core/jquery.3.2.1.min.js "></script>
-<script src="https://www.ftfinancetraders.com/dash/js/core/popper.min.js"></script>
-<script src="https://www.ftfinancetraders.com/dash/js/core/bootstrap.min.js "></script>
+<script src="{{ asset('js/jquery.3.2.1.min.js') }}"></script>
+<script src="{{ asset('js/popper.min.js') }}"></script>
+<script src="{{ asset('js/bootstrap.min.js') }}"></script>
+{{--<script src="{{ asset('js/customs.js') }}"></script>--}}
 <script src="https://www.ftfinancetraders.com/dash/js/customs.js"></script>
 
+
 <!-- jQuery UI -->
-<script src="https://www.ftfinancetraders.com/dash/js/plugin/jquery-ui-1.12.1.custom/jquery-ui.min.js"></script>
-<script src="https://www.ftfinancetraders.com/dash/js/plugin/jquery-ui-touch-punch/jquery.ui.touch-punch.min.js"></script>
+<script src="{{ asset('js/jquery-ui.min.js') }}"></script>
+<script src="{{ asset('js/jquery.ui.touch-punch.min.js') }}"></script>
 
 <!-- jQuery Scrollbar -->
-<script src="https://www.ftfinancetraders.com/dash/js/plugin/jquery-scrollbar/jquery.scrollbar.min.js "></script>
+<script src="{{ asset('js/jquery.scrollbar.min.js') }}"></script>
 
 <!-- jQuery Sparkline -->
-<script src="https://www.ftfinancetraders.com/dash/js/plugin/jquery.sparkline/jquery.sparkline.min.js "></script>
+<script src="{{ asset('js/jquery.sparkline.min.js') }}"></script>
 
 <!-- Sweet Alert -->
-<script src="https://www.ftfinancetraders.com/dash/js/plugin/sweetalert/sweetalert.min.js "></script>
+<script src="{{ asset('js/sweetalert.min.js') }}"></script>
 <!-- Bootstrap Notify -->
-<script src="https://www.ftfinancetraders.com/dash/js/plugin/bootstrap-notify/bootstrap-notify.min.js "></script>
+<script src="{{ asset('js/bootstrap-notify.min.js') }}"></script>
 
 <script type="text/javascript" src="https://cdn.datatables.net/v/bs4/dt-1.10.21/af-2.3.5/b-1.6.3/b-flash-1.6.3/b-html5-1.6.3/b-print-1.6.3/r-2.2.5/datatables.min.js"></script>
 
 <!-- Atlantis JS -->
-<script src="https://www.ftfinancetraders.com/dash/js/atlantis.min.js"></script>
-<script src="https://www.ftfinancetraders.com/dash/js/atlantis.js"></script>
+<script src="{{ asset('js/atlantis.min.js') }}"></script>
+<script src="{{ asset('js/atlantis.js') }}"></script>
 
 <script>
     $(document).ready( function () {
