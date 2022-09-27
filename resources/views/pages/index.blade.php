@@ -727,9 +727,9 @@
 
             <div class="row align-items-center">
 
-                <div class="col-lg-4 col-md-6">
+                <div  class="col-lg-4 col-md-6">
                     <div class=" card">
-                        <img src="temp/assets/images/test/ceo.jpg" alt="" class="img-fluid cute-img">
+                        <img style="height: 270px" src="img/ceo.jpeg" alt="" class="img-fluid cute-img">
                         <h3 class="text-center" style="color: #9e1f63 !important">James Smith</h3>
                         <div class="name text-center">C.E.O</div>
 
@@ -756,7 +756,7 @@
                 </div>
                 <div class="col-lg-4 col-md-6 mt-2 mb-2">
                     <div class=" card">
-                        <img src="temp/assets/images/test/manager.jpg" alt="" class="img-fluid cute-img">
+                        <img src="img/manager.jpeg" alt="" class="img-fluid cute-img">
                         <h3 class="text-center" style="color: #9e1f63 !important">Mrs Allen Jessica Helen</h3>
                         <div class="name text-center">Manager</div>
 
