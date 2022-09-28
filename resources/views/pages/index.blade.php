@@ -17,7 +17,7 @@
                         above</h3>
 
                     <div class="btn_group animation" data-animation="fadeInUp" data-animation-delay="1.4s">
-                        <a href="register.html" class="btn btn-default nav-link">TRADE FX</a> <a href="register.html"
+                        <a href="register" class="btn btn-default nav-link">TRADE FX</a> <a href="register"
                                                                                                  class="btn btn-default nav-link">CRYPTO TRADE</a>
                     </div>
 
@@ -41,7 +41,7 @@
                         </div>
                         <div class="btn_group pt-2 pb-3 animation" data-animation="fadeInUp"
                              data-animation-delay="1.4s">
-                            <a href="register.html" class="btn btn-default btn-radius">LOGIN / REGISTER<i
+                            <a href="register" class="btn btn-default btn-radius">LOGIN / REGISTER<i
                                     class="ion-ios-arrow-thin-right"></i></a>
                         </div>
                         <span class="text-white icon_title animation" data-animation="fadeInUp"
@@ -63,7 +63,7 @@
                                         <div class="title_dark title_border">
                                             <h4>TRADE FX, STOCKS, INDICES +more</h4>
                                             <p>click below to start</p>
-                                            <a href="register.html" class="btn btn-default btn-radius">FX TRADE SECTION
+                                            <a href="register" class="btn btn-default btn-radius">FX TRADE SECTION
                                                 <i class="ion-ios-arrow-thin-right"></i></a>
 
                                         </div>
@@ -74,7 +74,7 @@
                                         <div class="title_dark title_border">
                                             <h4>AUTOMATED CRYPTO TRADE</h4>
                                             <p>click to start</p>
-                                            <a href="register.html" class="btn btn-default btn-radius">CRYPTO TRADE
+                                            <a href="register" class="btn btn-default btn-radius">CRYPTO TRADE
                                                 SECTION <i class="ion-ios-arrow-thin-right"></i></a>
                                         </div>
                                     </div>
