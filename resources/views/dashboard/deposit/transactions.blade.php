@@ -33,9 +33,19 @@
                                             </tr>
                                             </thead>
                                             <tbody>
-                                            <tr class="odd">
-                                                <td valign="top" colspan="5" class="dataTables_empty">No data available in table</td>
-                                            </tr>
+                                            @forelse($deposits as $item)
+                                                <tr>
+                                                    <td>{{ $item->transId() }}</td>
+                                                    <td>${{ $item->amount }}</td>
+                                                    <td>{{ $item->payment_method->name  }}</td>
+                                                    <td>{!! $item->status() !!}</td>
+                                                    <td>{{ date('d-M-y', strtotime($item->created_at)) }}</td>
+                                                </tr>
+                                            @empty
+                                                <tr class="odd">
+                                                    <td valign="top" colspan="5" class="dataTables_empty">No data available in table</td>
+                                                </tr>
+                                            @endforelse
                                             </tbody>
                                         </table>
                                     </div>

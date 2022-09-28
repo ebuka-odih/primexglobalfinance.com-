@@ -188,12 +188,12 @@
                             <div class="collapse" id="bases">
                                 <ul class="nav nav-collapse">
                                     <li>
-                                        <a href="{{ route('user.acctDetails') }}">
+                                        <a href="{{ route('user.account') }}">
                                             <span class="sub-item">Withdrawal Info</span>
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="https://www.ftfinancetraders.com/dashboard/notification">
+                                        <a href="">
                                             <span class="sub-item">Notifications</span>
                                         </a>
                                     </li>

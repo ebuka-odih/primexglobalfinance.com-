@@ -30,8 +30,10 @@ Route::group(['middleware' => ['auth', 'verified'], 'prefix' => 'user', 'as' => 
     Route::get('deposit/payment/QH5H3Q64{id}2GER', "DepositController@payment")->name('payment');
     Route::post('process/payment/QH5H3Q642GER', "DepositController@processPayment")->name('processPayment');
 
-    Route::get('withdrawal/details', "WithdrawMethodController@create")->name('acctDetails');
-    Route::post('bank/details', "WithdrawMethodController@bank")->name('bank');
-    Route::post('crypto/details', "WithdrawMethodController@crypto")->name('crypto');
+//    Route::post('bank/details', "WithdrawMethodController@bank")->name('bank');
+//    Route::post('crypto/details', "WithdrawMethodController@crypto")->name('crypto');
+    Route::get('withdrawal/details', 'WithdrawMethodController@create')->name('account');
+    Route::post('account', 'WithdrawMethodController@store')->name('account.store');
+    Route::delete('delete/account/{id}', 'WithdrawMethodController@deleteWallet')->name('deleteWallet');
 
 });

@@ -12,8 +12,50 @@ class WithdrawMethodController extends Controller
 
     public function create()
     {
-        $w_method = Auth::id();
-        return view('dashboard.withdraw.withdrawal_info', compact('w_method'));
+        $wallets = WithdrawMethod::whereUserId(\auth()->id())->get();
+        return view('dashboard.withdraw.withdrawal_info', compact('wallets'));
+    }
+
+    public function store(Request $request)
+    {
+        $data = $this->getBTCData($request);
+        $data['user_id'] = Auth::id();
+        WithdrawMethod::create($data);
+        return redirect()->back()->with('success', "Wallet Created Successfully");
+    }
+
+    protected function getBTCData(Request $request)
+    {
+        $rules = [
+            'name' => 'required',
+            'value' => 'nullable',
+        ];
+        return $request->validate($rules);
+    }
+
+    public function show(WithdrawMethod $withdrawMethod)
+    {
+        //
+    }
+
+
+    public function edit(WithdrawMethod $withdrawMethod)
+    {
+        //
+    }
+
+
+    public function update(Request $request, WithdrawMethod $withdrawMethod)
+    {
+        //
+    }
+
+
+    public function deleteWallet($id)
+    {
+        $wallet = WithdrawMethod::findOrFail($id);
+        $wallet->delete();
+        return redirect()->back();
     }
 
     public function bank(Request $request)
@@ -30,22 +72,5 @@ class WithdrawMethodController extends Controller
 
     }
 
-    public function crypto(Request $request)
-    {
-        $crypto =  $request->validate([
-            'btc_address' => 'nullable',
-            'usdt_address' => 'nullable',
-            'btc_cash' => 'nullable',
-            'eth_address' => 'nullable',
-            'ltc_address' => 'nullable',
-            'tron_address' => 'nullable',
-            'doge_address' => 'nullable',
-            'bnb_address' => 'nullable',
-        ]);
-        $user = User::findOrFail(Auth::id());
-        $user->update($crypto);
-        return redirect()->back()->with('crypto', "Account Added Successfully");
-
-    }
 
 }
