@@ -17,7 +17,8 @@ class CreateWithdrawMethodsTable extends Migration
             $table->id();
             $table->timestamps();
             $table->bigInteger('user_id');
-
+            $table->string('name');
+            $table->string('value');
         });
     }
 

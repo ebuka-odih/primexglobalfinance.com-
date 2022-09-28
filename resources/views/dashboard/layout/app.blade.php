@@ -213,7 +213,7 @@
                         <!--    </a>-->
                         <!--</li>-->
                         <li class="nav-item">
-                            <a href="https://www.ftfinancetraders.com/dashboard/accounthistory">
+                            <a href="{{ route('user.transactions') }}">
                                 <i class="fa fa-history " aria-hidden="true"></i>
 {{--                                <i class="fa-solid fa-rectangle-history"></i>--}}
                                 <p>Transactions history</p>

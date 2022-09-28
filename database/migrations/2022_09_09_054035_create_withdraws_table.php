@@ -20,8 +20,7 @@ class CreateWithdrawsTable extends Migration
             $table->bigInteger('withdraw_method_id')->nullable()->default(0);
             $table->double('amount');
             $table->integer('status')->default(0);
-            $table->string('wallet_address')->nullable();
-            $table->integer('percent')->default(10);
+
         });
     }
 

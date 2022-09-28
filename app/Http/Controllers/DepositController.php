@@ -16,6 +16,7 @@ class DepositController extends Controller
     {
         $count = Deposit::whereUserId(\auth()->id())->where('status', 0)->count();
         $deposits = Deposit::whereUserId(\auth()->id())->where('status', 1)->latest()->paginate(6);
+        $trans_dep = Deposit::whereUserId(\auth()->id())->latest();
         return view('dashboard.deposit.transactions', compact('deposits', 'count'));
     }
 

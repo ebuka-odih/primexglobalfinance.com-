@@ -46,19 +46,19 @@ class CreateUsersTable extends Migration
             $table->timestamps();
 
 
-            $table->string('bank_name')->nullable();
-            $table->string('acct_name')->nullable();
-            $table->string('acct_number')->nullable();
-            $table->integer('bank')->default(0);
-
-            $table->string('btc_address')->nullable();
-            $table->string('usdt_address')->nullable();
-            $table->string('btc_cash')->nullable();
-            $table->string('eth_address')->nullable();
-            $table->string('ltc_address')->nullable();
-            $table->string('tron_address')->nullable();
-            $table->string('doge_address')->nullable();
-            $table->string('bnb_address')->nullable();
+//            $table->string('bank_name')->nullable();
+//            $table->string('acct_name')->nullable();
+//            $table->string('acct_number')->nullable();
+//            $table->integer('bank')->default(0);
+//
+//            $table->string('btc_address')->nullable();
+//            $table->string('usdt_address')->nullable();
+//            $table->string('btc_cash')->nullable();
+//            $table->string('eth_address')->nullable();
+//            $table->string('ltc_address')->nullable();
+//            $table->string('tron_address')->nullable();
+//            $table->string('doge_address')->nullable();
+//            $table->string('bnb_address')->nullable();
         });
     }
 
