@@ -1,7 +1,7 @@
 @component('mail::message')
 # Withdrawal Request
 
-Dear {{ $data['user']->fullname() }}
+Dear {{ $data['user']->name }}
 
 <br>
 

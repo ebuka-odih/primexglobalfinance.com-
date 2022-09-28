@@ -1,5 +1,5 @@
 @component('mail::message')
-# Dear {{ $withdraw->user->fullname() }}
+# Dear {{ $withdraw->user->name }}
 
 You have successfully received your withdrawal from <a href="affluent-coinfx.com">affluent-coinfx.com</a> to your {{ $withdraw->withdraw_method['value'] }} wallet
 

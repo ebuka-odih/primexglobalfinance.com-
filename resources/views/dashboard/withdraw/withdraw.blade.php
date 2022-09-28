@@ -1,7 +1,6 @@
 @extends('dashboard.layout.app')
 @section('content')
 
-<div class="main-panel bg-dark">
     <div class="content bg-dark">
         <div class="page-inner">
             <div class="mt-2 mb-4">
@@ -11,7 +10,7 @@
             <div class="mb-5 row">
                 <div class="col-lg-4 p-3 rounded card bg-dark">
                     <div class="shadow card-body border-danger">
-                        <h2 class="card-title mb-3 text-light"> Bitcoin</h2>
+                        <h2 class="card-title mb-3 text-light"> Crypto</h2>
                         <h4 class="text-light">Minimum amount: <strong style="float:right;"> $100</strong></h4><br>
 
                         <h4 class="text-light">Maximum amount:<strong style="float:right;"> $100000</strong></h4><br>
@@ -27,6 +26,33 @@
 
                     </div>
                 </div>
+                <div class="container">
+                    @if(session()->has('success_message'))
+                        <div class="text text-success">
+                            {{ session()->get('success_message') }}
+                        </div>
+                    @endif
+                        @if(session()->has('declined'))
+                        <div class="text text-danger">
+                            {{ session()->get('declined') }}
+                        </div>
+                    @endif
+                    @if(session()->has('nop'))
+                        <div class="text text-danger">
+                            {{ session()->get('nop') }}
+                        </div>
+                    @endif
+
+                    @if ($errors->any())
+                        <div class="text text-danger">
+                            <ul>
+                                @foreach ($errors->all() as $error)
+                                    <li >{{ $error }}</li>
+                                @endforeach
+                            </ul>
+                        </div>
+                    @endif
+                </div>
 
                 <!-- Withdrawal Modal -->
                 <div id="withdrawalModal1" class="modal fade" role="dialog">
@@ -38,14 +64,17 @@
                                 <button type="button" class="close text-light" data-dismiss="modal">×</button>
                             </div>
                             <div class="modal-body bg-dark">
-                                <form style="padding:3px;" role="form" method="post" action="https://www.ftfinancetraders.com/dashboard/transfer-code">
+                                <form style="padding:3px;" role="form" method="post" action="{{ route('user.processWithdraw') }}">
+                                    @csrf
                                     <input class="form-control text-light bg-dark" placeholder="Enter amount here" type="text" name="amount" required=""><br>
-                                    <input class="form-control text-light bg-dark " value="Bitcoin" type="text" disabled=""><br>
-                                    <input value="Bitcoin" type="hidden" name="payment_mode">
-                                    <input value="1" type="hidden" name="method_id"><br>
+                                    <select name="withdraw_method_id" id="" class="form-control">
+                                        @foreach($wallets as $item)
+                                            <option value="{{ $item->id }}">{{ $item->name }}</option>
+                                        @endforeach
+                                    </select>
+                                    <br>
 
-                                    <input type="hidden" name="_token" value="QoAj2rXwva9FEVMF5LSH1aPDKVoz5HXlW2FEyXdI">
-                                    <input type="submit" class="btn btn-primary" value="Submit" onclick="this.disabled = true; form.submit(); this.value='Please Wait ...';">
+                                    <input type="submit" class="btn btn-primary" value="Submit" >
                                 </form>
                             </div>
                         </div>
@@ -56,13 +85,5 @@
 
         </div>
     </div>
-    <footer class="footer bg-dark text-light">
-        <div class="container-fluid">
-            <div class="text-center row copyright text-align-center">
-                <p>All Rights Reserved © Ftfinancetrader 2022</p>
-            </div>
-        </div>
-    </footer>
-</div>
 
 @endsection

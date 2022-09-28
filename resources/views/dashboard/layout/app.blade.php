@@ -228,12 +228,12 @@
                             <div class="collapse" id="dept">
                                 <ul class="nav nav-collapse">
                                     <li>
-                                        <a href="https://www.ftfinancetraders.com/dashboard/deposits">
+                                        <a href="{{ route('user.deposit') }}">
                                             <span class="sub-item">Deposits</span>
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="https://www.ftfinancetraders.com/dashboard/withdrawals">
+                                        <a href="{{ route('user.withdraw') }}">
                                             <span class="sub-item">Withdrawal</span>
                                         </a>
                                     </li>
