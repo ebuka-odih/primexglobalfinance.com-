@@ -8,7 +8,7 @@
                 <p>Welcome to Primexglobalfinance. Grow and multiply your money with us securedly</p>
                 <div class="button__holder" style="padding-top: 0rem; padding-bottom: .4rem">
                     <a href="{{ route('user.deposit') }}" class="deposits" style="background: #FFAD46 !important; margin-right: 1rem">Fund Your Account</a>
-                    <a href="/dashboard/withdrawals" class="deposits" style="background: #F25961 !important;">Withdraw Funds</a>
+                    <a href="{{ route('user.withdraw') }}" class="deposits" style="background: #F25961 !important;">Withdraw Funds</a>
                 </div>
                 <h5 id="ann" class="text-lightop-7 mb-4">It can only get better! Welcome to Primexglobalfinance. Hope you are amazed.</h5>
                 <script type="text/javascript">

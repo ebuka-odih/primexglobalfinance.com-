@@ -6,6 +6,7 @@ use App\Deposit;
 use App\Mail\AdminDepositAlert;
 use App\Mail\DepositAlert;
 use App\PaymentMethod;
+use App\Withdraw;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Mail;
@@ -14,9 +15,9 @@ class DepositController extends Controller
 {
     public function transactions()
     {
-        $count = Deposit::whereUserId(\auth()->id())->where('status', 0)->count();
         $deposits = Deposit::whereUserId(\auth()->id())->where('status', 1)->get();
-        return view('dashboard.deposit.transactions', compact('deposits', 'count'));
+        $withdrawal = Withdraw::whereUserId(\auth()->id())->get();
+        return view('dashboard.deposit.transactions', compact('deposits', 'withdrawal'));
     }
 
     public function deposit()

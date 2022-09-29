@@ -50,47 +50,14 @@
                                         </table>
                                     </div>
                                 </div>
-                                <div class="row">
-                                    <div class="col-sm-12 col-md-5">
-                                        <div class="dataTables_info" id="UserTable_info" role="status" aria-live="polite">Showing 0 to 0 of 0 entries</div>
-                                    </div>
-                                    <div class="col-sm-12 col-md-7">
-                                        <div class="dataTables_paginate paging_simple_numbers" id="UserTable_paginate">
-                                            <ul class="pagination">
-                                                <li class="paginate_button page-item previous disabled" id="UserTable_previous">
-                                                    <a href="#" aria-controls="UserTable" data-dt-idx="0" tabindex="0" class="page-link">Previous</a>
-                                                </li>
-                                                <li class="paginate_button page-item next disabled" id="UserTable_next">
-                                                    <a href="#" aria-controls="UserTable" data-dt-idx="1" tabindex="0" class="page-link">Next</a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
+
                             </div>
                         </div>
                     </div>
                     <div class="tab-pane fade p-3 bg-dark" id="2" role="tabpanel" aria-labelledby="nav-profile-tab">
                         <div class="bs-example widget-shadow table-responsive" data-example-id="hoverable-table">
                             <div id="UserTable_wrapper" class="dataTables_wrapper dt-bootstrap4 no-footer">
-                                <div class="row">
-                                    <div class="col-sm-12 col-md-6">
-                                        <div class="dataTables_length" id="UserTable_length">
-                                            <label>Show <select name="UserTable_length" aria-controls="UserTable" class="custom-select custom-select-sm form-control form-control-sm bg-dark text-light">
-                                                    <option value="10">10</option>
-                                                    <option value="25">25</option>
-                                                    <option value="50">50</option>
-                                                    <option value="100">100</option>
-                                                </select> entries </label>
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-12 col-md-6">
-                                        <div id="UserTable_filter" class="dataTables_filter">
-                                            <label>Search: <input type="search" class="form-control form-control-sm bg-dark text-light" placeholder="" aria-controls="UserTable">
-                                            </label>
-                                        </div>
-                                    </div>
-                                </div>
+
                                 <div class="row">
                                     <div class="col-sm-12">
                                         <table id="UserTable" class="UserTable table table-hover text-light dataTable no-footer" role="grid" aria-describedby="UserTable_info">
@@ -105,9 +72,20 @@
                                             </tr>
                                             </thead>
                                             <tbody>
-                                            <tr class="odd">
-                                                <td valign="top" colspan="6" class="dataTables_empty">No data available in table</td>
-                                            </tr>
+                                            @forelse($withdrawal as $item)
+                                                <tr>
+                                                    <td>{{ $item->transId() }}</td>
+                                                    <td>${{ $item->amount }}</td>
+                                                    <td>${{ $item->amount + 10 }}</td>
+                                                    <td>{{ $item->withdraw_method->name  }}</td>
+                                                    <td>{!! $item->status() !!}</td>
+                                                    <td>{{ date('d-M-y', strtotime($item->created_at)) }}</td>
+                                                </tr>
+                                            @empty
+                                                <tr class="odd">
+                                                    <td valign="top" colspan="5" class="dataTables_empty">No data available in table</td>
+                                                </tr>
+                                            @endforelse
                                             </tbody>
                                         </table>
                                     </div>
