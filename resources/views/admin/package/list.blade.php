@@ -30,6 +30,7 @@
                             <th>Name</th>
                             <th>Term Day(s)</th>
                             <th>Daily Interest(%)</th>
+                            <th>Gift</th>
                             <th class="d-none d-sm-table-cell" style="width: 15%;">Min Deposit</th>
                             <th class="d-none d-sm-table-cell" style="width: 15%;">Max Deposit</th>
                             <th class="text-center" style="width: 100px;">Actions</th>
@@ -48,11 +49,14 @@
                                 <td class="fw-semibold">
                                     {{ $item->daily_interest }}
                                 </td>
+                                <td class="fw-semibold">
+                                    ${{ $item->gift }}
+                                </td>
                                 <td class="d-none d-sm-table-cell">
                                     ${{ $item->min_deposit }}
                                 </td>
                                 <td class="d-none d-sm-table-cell">
-                                    ${{ $item->max_deposit }}
+                                    ${{ $item->max() }}
                                 </td>
                                 <td class="text-center">
                                     <div class="btn-group">

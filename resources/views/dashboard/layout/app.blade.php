@@ -250,7 +250,7 @@
                             <div class="collapse" id="mpack">
                                 <ul class="nav nav-collapse">
                                     <li>
-                                        <a href="https://www.ftfinancetraders.com/dashboard/mplans">
+                                        <a href="{{ route('user.plans') }}">
                                             <span class="sub-item">Investment Plans</span>
                                         </a>
                                     </li>

@@ -38,4 +38,5 @@ Route::group(['middleware' => ['auth', 'verified'], 'prefix' => 'user', 'as' => 
     Route::post('account', 'WithdrawMethodController@store')->name('account.store');
     Route::delete('delete/account/{id}', 'WithdrawMethodController@deleteWallet')->name('deleteWallet');
 
+    Route::get('investment/plans', "InvestmentController@plans")->name('plans');
 });
