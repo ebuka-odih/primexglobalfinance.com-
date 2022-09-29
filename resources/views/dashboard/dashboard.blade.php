@@ -44,7 +44,7 @@
                                     </span>
                             <div>
                                 <h5 class="mb-1 text-light"><b>
-                                        &#36;0.00
+                                        &#36;@convert($deposit)
                                     </b></h5>
                                 <small class="text-muted">Deposited</small>
                             </div>
@@ -59,7 +59,7 @@
                                         <i class="fa fa-coins"></i>
                                     </span>
                             <div>
-                                <h5 class="mb-1 text-light"><b>&#36;0.00</b></h5>
+                                <h5 class="mb-1 text-light"><b>&#36;@convert(auth()->user()->profit)</b></h5>
                                 <small class="text-muted text-light">Profit</small>
                             </div>
                         </div>
@@ -74,7 +74,7 @@
                                         <i class="fa fa-gift"></i>
                                     </span>
                             <div>
-                                <h5 class="mb-1 text-light"><b>&#36;0.00</b></h5>
+                                <h5 class="mb-1 text-light"><b>&#36;@convert(auth()->user()->bonus)</b></h5>
                                 <small class="text-muted text-light">Bonus</small>
                             </div>
                         </div>
@@ -87,7 +87,7 @@
                                         <i class="fa fa-retweet"></i>
                                     </span>
                             <div>
-                                <h5 class="mb-1 text-light"><b>&#36;0.00</b></h5>
+                                <h5 class="mb-1 text-light"><b>&#36;@convert(auth()->user()->ref_bonus)</b></h5>
                                 <small class="text-muted text-light">Referral Bonus</small>
                             </div>
                         </div>
@@ -116,7 +116,7 @@
                                         <i class="fa fa-dollar-sign"></i>
                                     </span>
                             <div>
-                                <h5 class="mb-1 text-light"><b>&#36;0.00</b></h5>
+                                <h5 class="mb-1 text-light"><b>&#36;@convert(auth()->user()->balance)</b></h5>
                                 <small class="text-muted">Balance</small>
                             </div>
                         </div>

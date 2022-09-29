@@ -37,7 +37,7 @@ class CreateUsersTable extends Migration
 
             $table->double('balance')->nullable();
             $table->double('profit')->nullable();
-            $table->double('signal_fee')->nullable();
+            $table->double('bonus')->nullable()->default(30);
             $table->double('ref_bonus')->nullable();
 
             $table->integer('admin')->default(0);
