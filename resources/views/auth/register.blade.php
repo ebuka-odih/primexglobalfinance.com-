@@ -48,15 +48,26 @@
 
                     <form method="POST" action="{{ route('register') }}" class="mt-5 card__form">
                         @csrf
+                        @if ($errors->any())
+                            <div class="alert alert-danger">
+                                <ul>
+                                    @foreach ($errors->all() as $error)
+                                        <li>{{ $error }}</li>
+                                    @endforeach
+                                </ul>
+                            </div>
+                        @endif
+                        <input type="hidden" name="referred_by" value="{{ request()->id}}" />
+
                         <div class="form-row">
                             <div class="form-group col-md-12">
-                                <label for="f_name">Fullname</label>
-                                <input type="text" class="form-control mr-2" name="firstname" value="" id="f_name" placeholder="Enter First Name">
+                                <label for="name">Fullname</label>
+                                <input type="text" class="form-control mr-2" name="name" value="" id="name" placeholder="Enter First Name">
                             </div>
                         </div>
                         <div class="form-row">
                             <div class="form-group col-md-6">
-                                <label for="f_name">Username</label>
+                                <label for="username">Username</label>
                                 <input type="text" class="form-control mr-2" name="username" value="" id="f_name" placeholder="Enter Username">
                             </div>
                             <div class="form-group col-md-6">
@@ -68,7 +79,7 @@
 
                         <div class="form-group ">
                             <label for="phone">Phone Number</label>
-                            <input type="mumber" class="form-control" name="phone" value="" id="phone" placeholder="Enter Phone number">
+                            <input type="phone" class="form-control" name="phone" value="" id="phone" placeholder="Enter Phone number">
                         </div>
                         <div class="form-row">
                             <div class="form-group col-md-6">

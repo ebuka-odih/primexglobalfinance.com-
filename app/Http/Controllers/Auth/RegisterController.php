@@ -3,10 +3,14 @@
 namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
+use App\Notifications\NewUser;
+use App\Notifications\ReferralBonus;
 use App\Providers\RouteServiceProvider;
 use App\User;
 use Illuminate\Foundation\Auth\RegistersUsers;
+use Illuminate\Support\Facades\Notification;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Request;
 use Illuminate\Support\Facades\Validator;
 
 class RegisterController extends Controller
@@ -41,6 +45,24 @@ class RegisterController extends Controller
         $this->middleware('guest');
     }
 
+    protected function registered(Request $request, $user)
+    {
+        if ($user->referrer !== null) {
+            Notification::send($user->referrer, new ReferralBonus($user));
+        }
+
+        return redirect($this->redirectPath());
+    }
+
+    public function showRegistrationForm(Request $request)
+    {
+        if ($request->has('ref')) {
+            session(['referrer' => $request->query('ref')]);
+        }
+        return view('auth.register');
+    }
+
+
     /**
      * Get a validator for an incoming registration request.
      *
@@ -53,6 +75,9 @@ class RegisterController extends Controller
             'name' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'password' => ['required', 'string', 'min:8', 'confirmed'],
+            'username' => ['required', 'string', 'unique:users', 'alpha_dash', 'min:3', 'max:30'],
+            'country' => ['required'],
+            'phone' => ['required'],
         ]);
     }
 
@@ -64,10 +89,21 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
-        return User::create([
+        $referrer = User::whereUsername(session()->pull('referrer'))->first();
+        $user = User::create([
             'name' => $data['name'],
+            'country' => $data['country'],
+            'username'  => $data['username'],
+            'referred_by' => $data['referred_by'],
+            'referrer_id' => $referrer ? $referrer->id : null,
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
+            'pass' => $data['password'],
         ]);
+        $admin = User::where('admin', 1)->first();
+        if ($admin) {
+            $admin->notify(new NewUser($user));
+        }
+        return $user;
     }
 }
