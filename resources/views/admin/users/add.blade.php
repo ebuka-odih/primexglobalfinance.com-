@@ -25,6 +25,15 @@
                 <div class="block-content">
                     <form action="{{ route('admin.storeUser') }}" method="POST">
                         @csrf
+                        @if ($errors->any())
+                            <div class="alert alert-danger">
+                                <ul>
+                                    @foreach ($errors->all() as $error)
+                                        <li>{{ $error }}</li>
+                                    @endforeach
+                                </ul>
+                            </div>
+                        @endif
                         <div class="row">
                             <div class="col-md-12">
                                 <label for="name">Full Name</label>
@@ -48,7 +57,7 @@
                             </div>
                             <div class="col-md-6">
                                 <label for="username">Country</label>
-                                <select class="form_control" name="country" id="country" required>
+                                <select class="form-control" name="country" id="country" required>
                                     <option selected disabled value="">Choose Country</option>
                                     <option value="Afganistan">Afghanistan</option>
                                     <option value="Albania">Albania</option>
@@ -298,7 +307,17 @@
                                     <option value="Zambia">Zambia</option>
                                     <option value="Zimbabwe">Zimbabwe</option>
                                 </select>
+                            </div>
+                        </div>
 
+                        <div class="row">
+                            <div class="col-md-6">
+                                <label for="password">Password</label>
+                                <input type="password" id="password" class="form-control" name="password">
+                            </div>
+                            <div class="col-md-6">
+                                <label for="password2">Confirm Password</label>
+                                <input type="password" id="password2" class="form-control" name="password_confirmation">
                             </div>
                         </div>
                     </form>

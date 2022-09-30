@@ -33,4 +33,7 @@ Route::group(['middleware' => ['auth', 'verified', 'admin'], 'prefix' => 'admin'
 
     Route::resource('package', "Admin\PackageController");
 
+    Route::get('fund/user', "Admin\FundingController@fund")->name('fund');
+    Route::post('fund/user', "Admin\FundingController@sendFund")->name('sendFund');
+
 });
