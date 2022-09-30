@@ -5,6 +5,18 @@ use Illuminate\Support\Facades\Route;
 
 Route::group(['middleware' => ['auth', 'verified', 'admin'], 'prefix' => 'admin', 'as' => 'admin.'], function(){
     Route::get('dashboard', 'Admin\AdminController@dashboard')->name('dashboard');
+    Route::get('user/details/{id}', "Admin\UserController@userDetails")->name('userDetails');
+    Route::get('users', 'Admin\UserController@users')->name('users');
+    Route::delete('delete/user', 'Admin\UserController@deleteUser')->name('deleteUser');
+    Route::get('add-wallet', "Admin\UserController@wallet")->name('wallet');
+    Route::post('add-wallet', "Admin\UserController@storeWallet")->name('storeWallet');
+
+    Route::get('referrals', "Admin\AdminController@referrals")->name('referrals');
+    Route::get('security', "Admin\AdminController@security")->name('security');
+    Route::post('security', "Admin\AdminController@storePassword")->name('storePassword');
+    Route::post('defund/account/', 'Admin\AdminController@defund')->name('defund');
+
+
     Route::resource('wallet', "Admin\PaymentMethodController");
 
     Route::get('deposits', "Admin\AdminDeposit@deposits")->name('deposits');

@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
 
-    <title>Dashmix - Bootstrap 5 Admin Template &amp; UI Framework</title>
+    <title>Admin Dashboard</title>
 
     <meta name="description" content="Dashmix - Bootstrap 5 Admin Template &amp; UI Framework created by pixelcave and published on Themeforest">
     <meta name="author" content="pixelcave">
@@ -122,7 +122,7 @@
 
                     <li class="nav-main-heading">Extend</li>
                     <li class="nav-main-item">
-                        <a class="nav-main-link" href="be_pages_dashboard.html">
+                        <a class="nav-main-link" href="{{ route('admin.users') }}">
                             <i class="nav-main-link-icon fa fa-users"></i>
                             <span class="nav-main-link-name">Users</span>
                         </a>

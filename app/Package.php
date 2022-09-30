@@ -20,4 +20,10 @@ class Package extends Model
         }
         return $this->max_deposit;
     }
+
+    public function profit()
+    {
+        $profit = ($this->daily_interest * $this->min_deposit) / 100;
+        return $profit;
+    }
 }

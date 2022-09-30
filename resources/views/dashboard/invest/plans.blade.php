@@ -23,10 +23,11 @@
                     <div class="pricing-features">
                         <div class="feature text-light">Minimum Possible Deposit:<span class="text-light">$@convert($item->min_deposit)</span></div>
                         <div class="feature text-light">Maximum Possible Deposit:<span class="text-light">${{ $item->max() }}</span></div>
-                        <div class="feature text-light">Minimum Return:<span class="text-light">$2,500.00</span></div>
+                        <div class="feature text-light">Minimum Return:<span class="text-light">$@convert($item->profit())</span></div>
                         <div class="feature text-light">Maximum Return:<span class="text-light">$UNLIMITED</span></div>
-                        <div class="feature text-light">Gift Bonus:<span class="text-light">$300.00</span></div>
-                        <div class="feature text-light">Duration:<span class="text-light">24 hours</span></div>
+                        <div class="feature text-light">Gift Bonus:<span class="text-light">$@convert($item->gift)</span></div>
+                        <div class="feature text-light">Daily Interest:<span class="text-light">{{ $item->daily_interest }}%</span></div>
+                        <div class="feature text-light">Duration:<span class="text-light">{{ $item->term_days }} Day(s)</span></div>
                     </div> <br>
                     <!-- Button -->
                     <div class="">
