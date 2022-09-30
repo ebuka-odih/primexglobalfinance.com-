@@ -33,13 +33,7 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
-    public function acctDetails()
-    {
-        if ($this->bank == 1){
-            return $this->bank_name." ".$this->acct_name." ".$this->acct_number;
-        }
-        return $this->acctDetails();
-    }
+
 
 
     public function referrer()

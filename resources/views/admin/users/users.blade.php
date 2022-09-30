@@ -23,6 +23,8 @@
                     <h4>Users</h4>
                 </div>
                 <div class="block-content">
+                    <a href="{{ route('admin.addUser') }}" class="btn btn-primary">Add User</a>
+
                     <div class="table-responsive">
                         <table class="table table-striped table-vcenter">
                             <thead>
