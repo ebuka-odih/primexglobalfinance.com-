@@ -18,7 +18,7 @@
                 <h4 style="text-transform: uppercase"> <strong>PACKAGE NAME:</strong> {{ $item->package->name }} </h4>
                 <h4> <strong>AMOUNT:</strong> $@convert($item->amount)</h4>
                 <h4><strong>DURATION:</strong> {{ $item->package->term_days }} Day(s)</h4>
-                <p style="color:green;">Active! <i class="glyphicon glyphicon-ok"></i></p>
+                <p >{!! $item->status() !!} <i class="glyphicon glyphicon-ok"></i></p>
             </div>
             @endforeach
         </div>
