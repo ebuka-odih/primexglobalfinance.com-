@@ -93,31 +93,14 @@
                                 <i class="fa fa-bell"></i>
 
                             </a>
-                            <ul class="dropdown-menu notif-box animated fadeIn" aria-labelledby="notifDropdown">
+{{--                            <ul class="dropdown-menu notif-box animated fadeIn" aria-labelledby="notifDropdown">--}}
 
-                                <li>
-                                    <a class="see-all" href="https://www.ftfinancetraders.com/dashboard/notification">See all notifications<i class="fa fa-angle-right"></i> </a>
-                                </li>
-                            </ul>
+{{--                                <li>--}}
+{{--                                    <a class="see-all" href="https://www.ftfinancetraders.com/dashboard/notification">See all notifications<i class="fa fa-angle-right"></i> </a>--}}
+{{--                                </li>--}}
+{{--                            </ul>--}}
                         </li>
-                        <li class="nav-item dropdown hidden-caret">
-                            <a class="nav-link" data-toggle="dropdown" href="#" aria-expanded="false">
-                                <i class="fas fa-layer-group"></i><strong style="font-size:8px;">KYC</strong>
-                            </a>
-                            <div class="dropdown-menu quick-actions quick-actions-info animated fadeIn">
-                                <div class="quick-actions-header">
-                                    <span class="mb-1 title">KYC verification</span>
-                                    <span class="subtitle op-8"><a>KYC status: </a></span>
-                                </div>
-                                <div class="quick-actions-scroll scrollbar-outer">
-                                    <div class="quick-actions-items">
-                                        <div class="m-0 row">
-                                            <a href="#" data-toggle="modal" data-target="#verifyModal" class="btn btn-success">Verify Account </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
+
                         <li class="nav-item dropdown hidden-caret">
                             <a class="nav-link" data-toggle="dropdown" href="#" aria-expanded="false">
                                 <i class="fas fa-user"></i>
@@ -126,14 +109,14 @@
                                 <div class="dropdown-user-scroll scrollbar-outer">
                                     <li>
                                         <a class="dropdown-item" href="https://www.ftfinancetraders.com/dashboard/changepassword">Change Password</a>
-                                        <a class="dropdown-item" href="https://www.ftfinancetraders.com/dashboard/profile">Update Account</a>
+                                        <a class="dropdown-item" href="{{ route('user.profile') }}">Update Account</a>
                                         <div class="dropdown-divider"></div>
-                                        <a class="dropdown-item" href="https://www.ftfinancetraders.com/logout"
+                                        <a class="dropdown-item" href="{{ route('logout') }}"
                                            onclick="event.preventDefault();
                                     document.getElementById('logout-form').submit();">
                                             Logout
                                         </a>
-                                        <form id="logout-form" action="https://www.ftfinancetraders.com/logout" method="POST" style="display: none;">
+                                        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                                             <input type="hidden" name="_token" value="aPjwT7hwl3eyYGYL1YbZNrYKxzGwHL906MbQl3nR">
                                         </form>
                                     </li>
