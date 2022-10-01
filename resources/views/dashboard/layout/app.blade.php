@@ -164,7 +164,7 @@
                             <div class="collapse in" id="collapseExample">
                                 <ul class="nav">
                                     <li>
-                                        <a href="https://www.ftfinancetraders.com/dashboard/profile">
+                                        <a href="{{ route('user.profile') }}">
                                             <span class="link-collapse">Account Settings</span>
                                         </a>
                                     </li>
