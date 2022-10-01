@@ -31,13 +31,33 @@
                     </div> <br>
                     <!-- Button -->
                     <div class="">
-                        <form style="padding:3px;" role="form" method="post" action="https://www.ftfinancetraders.com/dashboard/joinplan">
+                        <form style="padding:3px;" role="form" method="post" action="{{ route('user.processInvest') }}">
+                            @csrf
+                            @if ($errors->any())
+                                <div class="text text-danger">
+                                    <ul>
+                                        @foreach ($errors->all() as $error)
+                                            <li>{{ $error }}</li>
+                                        @endforeach
+                                    </ul>
+                                </div>
+                            @endif
+                            @if(session()->has('declined'))
+                                <div class="text text-danger">
+                                    {{ session()->get('declined') }}
+                                </div>
+                            @endif
+                            @if(session()->has('insufficient'))
+                                <div class="text text-danger">
+                                    {{ session()->get('insufficient') }}
+                                </div>
+                            @endif
+
+                            <input type="hidden" value="{{ $item->id }}" name="package_id">
                             <h5 class="text-light">Amount to invest: ($500.00 default)</h5>
-                            <input type="number" min="500.00" max="UNLIMITED" name="iamount" placeholder="$500.00" class="form-control text-light bg-dark"> <br>
-                            <input type="hidden" name="duration" value="24 hours">
-                            <input type="hidden" name="id" value="29">
-                            <input type="hidden" name="_token" value="Hn04KxYqvEzyHaUqjsdIiDytCwJKHbfIXIVYsrh0">
+                            <input type="number" min="{{ $item->min_deposit }}" max="UNLIMITED" name="amount" placeholder="$500.00" class="form-control text-light bg-dark"> <br>
                             <input type="submit" class="btn btn-block pricing-action btn-primary nav-pills" value="Join plan" style=" border-radius: 40px;">
+
                         </form>
                     </div>
 

@@ -34,8 +34,6 @@ class User extends Authenticatable
     ];
 
 
-
-
     public function referrer()
     {
         return $this->belongsTo(User::class, 'referrer_id', 'id');

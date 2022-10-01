@@ -192,12 +192,8 @@
                                             <span class="sub-item">Withdrawal Info</span>
                                         </a>
                                     </li>
-                                    <li>
-                                        <a href="">
-                                            <span class="sub-item">Notifications</span>
-                                        </a>
-                                    </li>
                                 </ul>
+
                             </div>
                         </li>
                         <!--<li class="nav-item">-->
@@ -255,19 +251,20 @@
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="https://www.ftfinancetraders.com/dashboard/myplans">
+                                        <a href="{{ route('user.investmentDetails') }}">
                                             <span class="sub-item">My Investments</span>
                                         </a>
                                     </li>
                                 </ul>
                             </div>
                         </li>
-                        <li class="nav-item">
-                            <a href="https://www.ftfinancetraders.com/dashboard/referuser">
-                                <i class="fa fa-recycle " aria-hidden="true"></i>
-                                <p>Refer Users</p>
-                            </a>
-                        </li>
+{{--                        <li class="nav-item">--}}
+{{--                            <a href="https://www.ftfinancetraders.com/dashboard/referuser">--}}
+{{--                                <i class="fa fa-recycle " aria-hidden="true"></i>--}}
+{{--                                <p>Refer Users</p>--}}
+{{--                            </a>--}}
+{{--                        </li>--}}
+
                         <!--<li class="nav-item">-->
                         <!--    <a href="https://www.ftfinancetraders.com/dashboard/changepassword">-->
                         <!--        <i class="fa fa-key " aria-hidden="true"></i>-->
@@ -280,24 +277,24 @@
                         <!--        <p>Update Account</p>-->
                         <!--    </a>-->
                         <!--</li>-->
-                        <li class="nav-item">
-                            <a href="#" data-toggle="modal" data-target="#verifyModal">
-                                <i class="fa fa-user-plus " aria-hidden="true"></i>
+{{--                        <li class="nav-item">--}}
+{{--                            <a href="#" data-toggle="modal" data-target="#verifyModal">--}}
+{{--                                <i class="fa fa-user-plus " aria-hidden="true"></i>--}}
 {{--                                <i class="fa-solid fa-user-plus"></i>--}}
-                                <p>KYC Verification</p>
-                            </a>
-                        </li>
+{{--                                <p>KYC Verification</p>--}}
+{{--                            </a>--}}
+{{--                        </li>--}}
 
                         <li class="nav-item">
-                            <a href="https://www.ftfinancetraders.com/logout"
+                            <a href="{{ route('logout') }}"
                                onclick="event.preventDefault();
                                     document.getElementById('logout-form').submit();">
                                 <i class="fa fa-sign-out " aria-hidden="true"></i>
                                 <p>Logout</p>
 
                             </a>
-                            <form id="logout-form" action="https://www.ftfinancetraders.com/logout" method="POST" style="display: none;">
-                                <input type="hidden" name="_token" value="aPjwT7hwl3eyYGYL1YbZNrYKxzGwHL906MbQl3nR">
+                            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                @csrf
                             </form>
                         </li>
 
