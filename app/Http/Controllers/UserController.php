@@ -14,7 +14,8 @@ class UserController extends Controller
    {
        $deposit = Deposit::whereUserId(auth()->id())->where('status', 1)->sum('amount');
        $investment = Investment::whereUserId(auth()->id())->where('status', 1)->sum('amount');
-       return view('dashboard.dashboard', compact('deposit', 'investment'));
+       $active_investment = Investment::whereUserId(auth()->id())->where('status', 1)->count();
+       return view('dashboard.dashboard', compact('deposit', 'investment', 'active_investment'));
    }
 
    public function profile()

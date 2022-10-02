@@ -101,7 +101,7 @@
                                         <i class="fa fa-envelope"></i>
                                     </span>
                             <div>
-                                <h5 class="mb-1 text-light"><b>0</b></h5>
+                                <h5 class="mb-1 text-light"><b>@convert($investment)</b></h5>
                                 <small class="text-muted text-light">Investment Plans</small>
                             </div>
                         </div>
@@ -116,26 +116,14 @@
                                         <i class="fa fa-dollar-sign"></i>
                                     </span>
                             <div>
-                                <h5 class="mb-1 text-light"><b>&#36;@convert(auth()->user()->balance)</b></h5>
+                                <h5 class="mb-1 text-light"><b>&#36;@convert(auth()->user()->balance())</b></h5>
                                 <small class="text-muted">Balance</small>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <div class="col-sm-6 col-lg-3">
-                    <div class="p-3 card bg-dark shadow">
-                        <div class="d-flex align-items-center">
-                                    <span class="mr-3 stamp stamp-md bg-default">
-                                        <i class="fa fa-coins"></i>
-                                    </span>
-                            <div>
-                                <h5 class="mb-1 text-light"><b></b></h5>
-                                <small class="text-muted text-light">Earned BTC</small>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+
 
                 <div class="col-sm-6 col-lg-3">
                     <div class="p-3 card bg-dark shadow">
@@ -144,9 +132,11 @@
                                         <i class="fa fa-envelope-open"></i>
                                     </span>
                             <div>
-                                <h5 class="mb-1 text-light"><b>
-                                        No active plan
-                                    </b></h5>
+                                <h5 class="mb-1 text-light">
+                                    <b>
+                                        {{ $active_investment ? : "No Active Plan"}}
+                                    </b>
+                                </h5>
                                 <small class="text-muted text-light">Active Investment Plans</small>
                             </div>
                         </div>

@@ -47,9 +47,11 @@
             <!-- Elements -->
             <div class="block block-rounded">
                 <div class="block-content">
-                    <form action="{{ route('admin.sendFund') }}" method="POST" >
+                    <form action="{{ route('admin.processDeposit') }}" method="POST" >
                         <!-- Basic Elements -->
                         @csrf
+
+
                         @if(session()->has('success'))
                             <div class="alert alert-success">
                                 {{ session()->get('success') }}
@@ -78,13 +80,11 @@
 
                             <div class="col-lg-6 col-xl-6">
                                 <div class="mb-4">
-                                    <label class="form-label"  for="example-email-input">Type of Fund</label>
-                                    <select name="type" id="" class="form-control ">
-                                        <option disabled selected>Select </option>
-                                        <option value="Main-Deposit">Main Deposit</option>
-                                        <option value="Profit">Profit</option>
-                                        <option value="Referral-Bonus">Referral Bonus</option>
-                                        {{--                                        <option value="Profit">Profit</option>--}}
+                                    <label for="">Select Payment Method</label>
+                                    <select name="payment_method_id" id="" class="form-control">
+                                        @foreach($payment_m as $item)
+                                            <option value="{{ $item->id }}">{{ $item->name }}</option>
+                                        @endforeach
                                     </select>
                                 </div>
                             </div>
@@ -106,23 +106,6 @@
 
                     </form>
                     <br>
-
-                    <table class="table">
-                        <tr>
-                            <th>User</th>
-                            <th>Type</th>
-                            <th>Amount</th>
-                            <th>Date</th>
-                        </tr>
-                        @foreach($funds as $item)
-                        <tr>
-                            <td>{{ $item->user->name }}</td>
-                            <td>{{ $item->fund_type() }}</td>
-                            <td>{{ $item->amount }}</td>
-                            <td>{{ date('d m, Y', strtotime($item->created_at)) }}</td>
-                        </tr>
-                        @endforeach
-                    </table>
                 </div>
             </div>
             <!-- END Elements -->

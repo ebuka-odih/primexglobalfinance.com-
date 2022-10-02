@@ -89,7 +89,7 @@
                     <form style="padding:3px;" role="form" method="post" action="{{ route('user.processDeposit') }}">
                         @csrf
                         <label for="">Select Payment Method</label>
-                        <select name="payment_method_id" id="" class="form-control">
+                        <select name="payment_method_id" id="" class="form-control" required>
                             @foreach($payment_m as $item)
                             <option value="{{ $item->id }}">{{ $item->name }}</option>
                             @endforeach

@@ -117,7 +117,7 @@
                                             Logout
                                         </a>
                                         <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                                            <input type="hidden" name="_token" value="aPjwT7hwl3eyYGYL1YbZNrYKxzGwHL906MbQl3nR">
+                                            @csrf
                                         </form>
                                     </li>
                                 </div>

@@ -83,4 +83,10 @@ class User extends Authenticatable
         return $this->hasMany(Funding::class, 'user_id');
     }
 
+    public function balance()
+    {
+        $balance = $this->profit + $this->bonus + $this->ref_bonus;
+        return $balance;
+    }
+
 }

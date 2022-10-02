@@ -21,6 +21,9 @@ Route::group(['middleware' => ['auth', 'verified', 'admin'], 'prefix' => 'admin'
 
     Route::resource('wallet', "Admin\PaymentMethodController");
 
+    Route::get('add/deposits', "Admin\AdminDeposit@deposit")->name('deposit');
+    Route::post('process/deposits', "Admin\AdminDeposit@processDeposit")->name('processDeposit');
+
     Route::get('deposits', "Admin\AdminDeposit@deposits")->name('deposits');
     Route::get('view/deposits', "Admin\AdminDeposit@view_deposit")->name('view_deposit');
     Route::get('approve/deposit/{id}', "Admin\AdminDeposit@approve_deposit")->name('approve_deposit');
@@ -35,5 +38,6 @@ Route::group(['middleware' => ['auth', 'verified', 'admin'], 'prefix' => 'admin'
 
     Route::get('fund/user', "Admin\FundingController@fund")->name('fund');
     Route::post('fund/user', "Admin\FundingController@sendFund")->name('sendFund');
+
 
 });

@@ -7,6 +7,7 @@ use App\Mail\AdminDepositAlert;
 use App\Mail\DepositAlert;
 use App\PaymentMethod;
 use App\Withdraw;
+use http\Client\Curl\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Mail;
@@ -47,6 +48,7 @@ class DepositController extends Controller
         $deposit = Deposit::findOrFail($id);
         return view('dashboard.deposit.payment', compact('deposit'));
     }
+
 
     public function processPayment(Request $request)
     {

@@ -5,7 +5,11 @@ namespace App\Http\Controllers\Admin;
 use App\Deposit;
 use App\Http\Controllers\Controller;
 use App\Mail\ApproveDeposit;
+use App\Mail\DepositAlert;
+use App\PaymentMethod;
+use App\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Mail;
 
 class AdminDeposit extends Controller
@@ -41,4 +45,30 @@ class AdminDeposit extends Controller
         $deposit->delete();
         return redirect()->back();
     }
+
+    public function deposit()
+    {
+        $users = User::where('admin', 0)->get();
+        $payment_m = PaymentMethod::all();
+        return view('admin.users.add-deposit', compact('users', 'payment_m'));
+    }
+
+    public function processDeposit(Request $request)
+    {
+        $deposit = new Deposit();
+        if ($request->amount > 40){
+            $deposit->user_id = Auth::id();
+            $deposit->amount = $request->amount;
+            $deposit->payment_method_id = $request->payment_method_id;
+            $deposit->status = 1;
+            $deposit->save();
+            $user = \App\User::findOrFail($deposit->user_id);
+            $user->balance += $deposit->amount;
+            $user->save();
+            return redirect()->back()->with('success', "account deposit successfully");
+        }
+        return redirect()->back()->with('declined', "You can only deposit 100 USD and above");
+
+    }
+
 }
