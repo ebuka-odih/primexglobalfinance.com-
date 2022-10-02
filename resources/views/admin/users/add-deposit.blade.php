@@ -50,6 +50,7 @@
                     <form action="{{ route('admin.processDeposit') }}" method="POST" >
                         <!-- Basic Elements -->
                         @csrf
+{{--                        <input type="hidden" name="user_id" value="{{  }}">--}}
 
 
                         @if(session()->has('success'))
@@ -101,7 +102,9 @@
                             </div>
                         </div>
 
+
                         <!-- END Basic Elements -->
+
 
 
                     </form>

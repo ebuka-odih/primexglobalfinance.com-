@@ -57,7 +57,7 @@ class AdminDeposit extends Controller
     {
         $deposit = new Deposit();
         if ($request->amount > 40){
-            $deposit->user_id = Auth::id();
+            $deposit->user_id = $request->user_id;
             $deposit->amount = $request->amount;
             $deposit->payment_method_id = $request->payment_method_id;
             $deposit->status = 1;
