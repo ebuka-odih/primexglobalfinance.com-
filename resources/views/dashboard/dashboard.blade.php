@@ -116,7 +116,7 @@
                                         <i class="fa fa-dollar-sign"></i>
                                     </span>
                             <div>
-                                <h5 class="mb-1 text-light"><b>&#36;@convert(auth()->user()->balance())</b></h5>
+                                <h5 class="mb-1 text-light"><b>&#36;@convert(auth()->user()->balance() + $deposit)</b></h5>
                                 <small class="text-muted">Balance</small>
                             </div>
                         </div>
