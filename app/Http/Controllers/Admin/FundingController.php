@@ -26,12 +26,11 @@ class FundingController extends Controller
         if ($data['type'] == 'Referral-Bonus'){
             $user = User::findOrFail($data->user_id);
             $user->ref_bonus += $request->amount;
-            $user->balance += $request->amount;
             $user->save();
-        }elseif($data['type'] == 'Main-Deposit')
+        }elseif($data['type'] == 'Bonus')
         {
             $user = User::findOrFail($data->user_id);
-            $user->balance += $request->amount;
+            $user->bonus += $request->amount;
             $user->save();
             Mail::to($data->user->email)->send(new FundingMail($data));
             return redirect()->back()->with('success', "Fund sent successfully");

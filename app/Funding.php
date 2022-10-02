@@ -14,9 +14,9 @@ class Funding extends Model
 
     public function fund_type()
     {
-        if ($this->type == "Main-Deposit")
+        if ($this->type == "Bonus")
         {
-            return "Main-Deposit";
+            return "Bonus";
         }elseif ($this->type == "Referral-Bonus"){
             return "Referral-Bonus";
         }
