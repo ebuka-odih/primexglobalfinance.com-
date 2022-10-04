@@ -24,6 +24,7 @@ class UserController extends Controller
        return view('dashboard.profile', compact('user'));
    }
 
+
     public function updateProfile(Request $request)
     {
         $user = User::findOrFail(auth()->id());
@@ -31,6 +32,7 @@ class UserController extends Controller
         $user->update($data);
         return redirect()->back()->with('success', 'Profile Updated Successful');
     }
+
 
     protected function getData(Request $request){
         $rules = [
