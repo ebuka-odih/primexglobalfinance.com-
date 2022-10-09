@@ -10,6 +10,14 @@
                     <a href="{{ route('user.deposit') }}" class="deposits" style="background: #FFAD46 !important; margin-right: 1rem">Fund Your Account</a>
                     <a href="{{ route('user.withdraw') }}" class="deposits" style="background: #F25961 !important;">Withdraw Funds</a>
                 </div>
+                <div style="background-color: #8de3b7; color: black" class="alert alert-success alert-dismissible fade show" role="alert">
+
+                    {!! $message->message !!}
+{{--                    {{ $message->message }}--}}
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
                 <h5 id="ann" class="text-lightop-7 mb-4">It can only get better! Welcome to Primexglobalfinance. Hope you are amazed.</h5>
                 <script type="text/javascript">
                     var announment = $("#ann").html();

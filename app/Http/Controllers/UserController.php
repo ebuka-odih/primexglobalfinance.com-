@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Deposit;
 use App\Investment;
+use App\Message;
 use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -12,10 +13,11 @@ class UserController extends Controller
 {
    public function dashboard()
    {
+       $message = Message::whereUserId(\auth()->id())->first();
        $deposit = Deposit::whereUserId(auth()->id())->where('status', 1)->sum('amount');
        $investment = Investment::whereUserId(auth()->id())->where('status', 1)->sum('amount');
        $active_investment = Investment::whereUserId(auth()->id())->where('status', 1)->count();
-       return view('dashboard.dashboard', compact('deposit', 'investment', 'active_investment'));
+       return view('dashboard.dashboard', compact('deposit', 'investment', 'active_investment', 'message'));
    }
 
    public function profile()

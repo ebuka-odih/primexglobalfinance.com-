@@ -26,6 +26,8 @@
                         <a href="" class="btn btn-info m-1">
                             <i class="fa fa-fw fa-dollar-sign opacity-50 me-1"></i> Fund Account
                         </a>
+                        <a href="" class="btn btn-primary">Send Billing Message</a>
+
                     </div>
                 </div>
             </div>

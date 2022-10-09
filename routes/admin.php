@@ -35,9 +35,13 @@ Route::group(['middleware' => ['auth', 'verified', 'admin'], 'prefix' => 'admin'
     Route::delete('delete/withdrawal/{id}', "Admin\AdminWithdraw@delete_withdrawal")->name('delete_withdrawal');
 
     Route::resource('package', "Admin\PackageController");
-
     Route::get('fund/user', "Admin\FundingController@fund")->name('fund');
     Route::post('fund/user', "Admin\FundingController@sendFund")->name('sendFund');
 
+    Route::get('send/message', "Admin\AdminMessageController@messages")->name('message');
+    Route::post('send/message', "Admin\AdminMessageController@sendMessage")->name('sendMessage');
+    Route::get('edit/message/{id}', "Admin\AdminMessageController@editMessage")->name('editMessage');
+    Route::patch('update/message/{id}', "Admin\AdminMessageController@updateMessage")->name('updateMessage');
+    Route::delete('delete/message/{id}', "Admin\AdminMessageController@deleteMessage")->name('deleteMessage');
 
 });

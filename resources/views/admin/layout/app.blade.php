@@ -94,7 +94,7 @@
             <div class="content-side">
                 <ul class="nav-main">
                     <li class="nav-main-item">
-                        <a class="nav-main-link active" href="be_pages_dashboard.html">
+                        <a class="nav-main-link active" href="{{ route('admin.dashboard') }}">
                             <i class="nav-main-link-icon fa fa-location-arrow"></i>
                             <span class="nav-main-link-name">Dashboard</span>
                         </a>
@@ -120,7 +120,7 @@
                         </a>
                     </li>
 
-                    <li class="nav-main-heading">Extend</li>
+                    <li class="nav-main-heading">User</li>
                     <li class="nav-main-item">
                         <a class="nav-main-link" href="{{ route('admin.users') }}">
                             <i class="nav-main-link-icon fa fa-users"></i>
@@ -128,11 +128,12 @@
                         </a>
                     </li>
                     <li class="nav-main-item">
-                        <a class="nav-main-link" href="be_pages_dashboard.html">
-                            <i class="nav-main-link-icon fa fa-tools"></i>
-                            <span class="nav-main-link-name">Settings</span>
+                        <a class="nav-main-link nav-main"  href="{{ route('admin.message') }}">
+                            <i class="nav-main-link-icon fa fa-envelope"></i>
+                            <span class="nav-main-link-name">Send Message</span>
                         </a>
                     </li>
+                    <li class="nav-main-heading">Extend</li>
                     <li class="nav-main-item">
                         <a class="nav-main-link nav-main"  href="{{ route('admin.wallet.create') }}">
                             <i class="nav-main-link-icon fa fa-wallet"></i>
@@ -163,6 +164,13 @@
                             </li>
                         </ul>
                     </li>
+                    <li class="nav-main-item">
+                        <a class="nav-main-link" href="be_pages_dashboard.html">
+                            <i class="nav-main-link-icon fa fa-tools"></i>
+                            <span class="nav-main-link-name">Settings</span>
+                        </a>
+                    </li>
+
 
 
                 </ul>
