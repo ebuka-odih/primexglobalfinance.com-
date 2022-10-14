@@ -73,6 +73,17 @@ class Investment extends Model
         }
     }
 
+    public function adminStatus()
+    {
+        if ($this->status == 0){
+            return "<span class='badge bg-warning text text-uppercase'>Pending</span>";
+        }elseif ($this->status == 1){
+            return "<span class='badge bg-success text text-uppercase'>Successful</span>";
+        }else{
+            return "<span class='badge bg-danger text text-uppercase'>Cancelled</span>";
+        }
+    }
+
 
     public function total_earned(){
         return  $this->earning + $this->amount;

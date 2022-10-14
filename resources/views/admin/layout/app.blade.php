@@ -114,9 +114,9 @@
                         </a>
                     </li>
                     <li class="nav-main-item">
-                        <a class="nav-main-link" href="be_pages_dashboard.html">
+                        <a class="nav-main-link" href="{{ route('admin.investments') }}">
                             <i class="nav-main-link-icon fa fa-history"></i>
-                            <span class="nav-main-link-name">Transactions</span>
+                            <span class="nav-main-link-name">Investments</span>
                         </a>
                     </li>
 
@@ -165,7 +165,7 @@
                         </ul>
                     </li>
                     <li class="nav-main-item">
-                        <a class="nav-main-link" href="be_pages_dashboard.html">
+                        <a class="nav-main-link" href="{{ route('admin.security') }}">
                             <i class="nav-main-link-icon fa fa-tools"></i>
                             <span class="nav-main-link-name">Settings</span>
                         </a>
