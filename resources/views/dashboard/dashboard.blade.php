@@ -12,7 +12,7 @@
                 </div>
                 <div style="background-color: #8de3b7; color: black" class="alert alert-success alert-dismissible fade show" role="alert">
 
-                    {!! optional($message->message) ? : "No Message" !!}
+                    {!! optional($message)->message ? : "No Message" !!}
 {{--                    {{ $message->message }}--}}
                     <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
