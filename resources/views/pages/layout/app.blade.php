@@ -237,17 +237,8 @@
 <script src="temp/assets/js/scripts.js"></script>
 
 <!--Start of Tawk.to Script-->
-<script type="text/javascript">
-    var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-    (function(){
-        var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-        s1.async=true;
-        s1.src='https://embed.tawk.to/633c9ffc37898912e96ce4ea/1geid1thl';
-        s1.charset='UTF-8';
-        s1.setAttribute('crossorigin','*');
-        s0.parentNode.insertBefore(s1,s0);
-    })();
-</script>
+
+<script src="//code.tidio.co/qoge4s833tkz5xtugsh5jkhvfy2bp9vo.js" async></script>
 <!--End of Tawk.to Script-->
 
 
