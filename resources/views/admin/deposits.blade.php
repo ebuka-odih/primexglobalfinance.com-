@@ -46,7 +46,7 @@
                         <tr>
                             <td>{{ date('d-M-y', strtotime($item->created_at)) }}</td>
                             <td class="text-center">
-                                {{ $item->user->name }} (@convert( $item->user->balance))
+                                {{ optional($item->user)->name }} (@convert( optional($item->user)->balance))
                             </td>
                             <td class="fw-semibold">
                                 $ {{ $item->amount }}

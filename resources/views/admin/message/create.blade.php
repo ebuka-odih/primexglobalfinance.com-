@@ -109,7 +109,7 @@
                                     {{ date('d M, Y', strtotime( $item->created_at)) }}
                                 </td>
                                 <td class="fw-semibold">
-                                    {{ $item->user->name }}
+                                    {{ optional($item->user)->name }}
                                 </td>
                                 <td class="fw-semibold">
                                     {!! $item->message !!}
